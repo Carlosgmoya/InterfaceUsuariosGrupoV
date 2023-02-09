@@ -1,0 +1,6 @@
+El proyecto consistirá en el desarrollo de la página web de un restaurante con las siguientes funciones principales:
+  -Realizar pedidos a domicilio
+  -Reservar mesas en el restaurante
+  -Visualizar la carta
+  -Pedir comida a la mesa
+El repositorio de GitHub del proyecto es: https://github.com/Carlosgmoya/InterfaceUsuariosGrupoV
