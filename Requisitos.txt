@@ -1,0 +1,22 @@
+Requisitos Funcionales
+
+    1. Visualizar la carta
+    2. Hacer pedidos a domicilio
+        2.1. Registrar la dirección del pedido
+        2.2. Registrar el contacto del cliente que realiza el pedido
+        2.3. Elegir método de pago
+            -Con tarjeta
+            -Con efectivo
+        2.4. Añadir productos al pedido
+        2.5. Eliminar productos del pedido
+        2.6. Consultar el precio actual del pedido, conforme se añaden y eliminan productos
+    3. Hacer pedidos en mesa
+        3.1. Controlar en qué mesa se encuentra el cliente
+        3.2. Añadir productos al pedido
+        3.3. Eliminar productos del pedido
+        3.4. Consultar el precio actual del pedido, conforme se añaden y eliminan productos
+    4. Realizar reserva de mesas
+        4.1. Mostrar mesas disponibles
+        4.2. Controlar número de personas por mesa
+        4.3. Realizar reserva en un día concreto
+        4.4. Cancelar la reserva
