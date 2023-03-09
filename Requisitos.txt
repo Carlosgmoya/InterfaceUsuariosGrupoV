@@ -19,13 +19,30 @@ Requisitos Funcionales
 
     3. Hacer pedidos en mesa
         3.1. Solo accesible despues de autentificar
-            3.1.1 Identificar con un código simbólico
-            3.1.2 Identificar con un código QR
         3.2. Mostrar al usuario en qué mesa está situado
         3.3. Añadir productos al pedido
         3.4. Eliminar productos del pedido
         3.5. Consultar el precio actual del pedido, conforme se añaden y eliminan productos
         2.6. Mostrar los productos en "carritos"
+
+    Caso de uso: realizar un producto
+
+    1. Identificar con un código numericó 
+    2. Mostrar al usuario la carta, su "carrito" y pedido realizado(historial).
+        2.1. Hay un botón para pedir ayuda
+        2.2. Hay un botón para pedir la cuenta
+        2.3. Hay un subtotal para el carrito y luego otro para todo el pedido
+    3. Al pulsar la opción de anydir situado en un determinado producto
+    4. El "carrito" se actualiza, mostrando el precio, cantidad y subtotal del dicho producto
+    5. Al pulsar el logo de "-", la cantidad del producto se resta 1, se elimina automáticamente cuando cantidad = 0
+    6. Al pulsar el logo de "+", la cantidad del prodcuto se suma 1
+    7. Al pulsar el logo de "basura", se elimina el producto 
+    8. Al pulsar el bóton de "pedir", se salta una pestanya de confirmación
+    9. Al confirmar el pedido, el carrito se vacía y se pasa al "pedido realizado"
+    10. Los productos en "pedido realizado" tiene dos estado
+        10.1. Preparación
+        10.2. Entregado
+    
 
     4. Realizar reserva de mesas
         4.1. Mostrar mesas disponibles
