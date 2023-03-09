@@ -1,6 +1,11 @@
 Requisitos Funcionales
 
-    1. Visualizar la carta
+    1. Visualizar la carta (Carlos)
+        1.1. Opción de saltar a pedir en establecimiento
+        1.2. Opción de saltar a pedido a domicilio
+        1.3. Mostar el precio del producto 
+        1.4. Al poner ratón encima, mostar una etiqueta con los ingredientes
+
     2. Hacer pedidos a domicilio
         2.1. Registrar la dirección del pedido
         2.2. Registrar el contacto del cliente que realiza el pedido
@@ -10,13 +15,21 @@ Requisitos Funcionales
         2.4. Añadir productos al pedido
         2.5. Eliminar productos del pedido
         2.6. Consultar el precio actual del pedido, conforme se añaden y eliminan productos
+        2.7. Mostrar los productos en "carritos"
+
     3. Hacer pedidos en mesa
-        3.1. Controlar en qué mesa se encuentra el cliente
-        3.2. Añadir productos al pedido
-        3.3. Eliminar productos del pedido
-        3.4. Consultar el precio actual del pedido, conforme se añaden y eliminan productos
+        3.1. Solo accesible despues de autentificar
+            3.1.1 Identificar con un código simbólico
+            3.1.2 Identificar con un código QR
+        3.2. Mostrar al usuario en qué mesa está situado
+        3.3. Añadir productos al pedido
+        3.4. Eliminar productos del pedido
+        3.5. Consultar el precio actual del pedido, conforme se añaden y eliminan productos
+        2.6. Mostrar los productos en "carritos"
+
     4. Realizar reserva de mesas
         4.1. Mostrar mesas disponibles
-        4.2. Controlar número de personas por mesa
+            4.1.1. Las mesas que no estan disponible en un color especial (negro por ejemplo)
+        4.2. Mostrar limite de número de personas por mesa
         4.3. Realizar reserva en un día concreto
         4.4. Cancelar la reserva
