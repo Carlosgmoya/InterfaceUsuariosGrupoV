@@ -25,7 +25,7 @@ Requisitos Funcionales
         3.5. Consultar el precio actual del pedido, conforme se añaden y eliminan productos
         2.6. Mostrar los productos en "carritos"
 
-    Caso de uso: realizar un producto
+    Caso de uso: realizar un pedido
 
     1. Identificar con un código numericó 
     2. Mostrar al usuario la carta, su "carrito" y pedido realizado(historial).
