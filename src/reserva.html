@@ -6,6 +6,8 @@
         rel="stylesheet" 
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
         crossorigin="anonymous" />
+
+
     </head>
     <body>
         <header>
@@ -41,15 +43,42 @@
 
   
       <div class="row mt-2">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-                <section id="education">
-    
-                  <h2>MESA 1</h2>
 
-                </section>
-            </div> 
+        <div class="col-sm-4">
+
+          <div class="card">
+
+                  
+            <button class="btn btn-light" data-toggle="modal" data-target="#myModal">MESA 1</button>
+
+
+          </div>
+
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Ingrese datos de mesa</h5>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="numMesa">Número de mesa:</label>
+                      <input type="number" class="form-control" id="numMesa">
+                    </div>
+                    <div class="form-group">
+                      <label for="numPersonas">Número de personas:</label>
+                      <input type="number" class="form-control" id="numPersonas">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+              </div>
+            </div>
           </div>
   
         </div>
@@ -233,4 +262,17 @@
       </div>
     </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#myModal').on('shown.bs.modal', function() {
+          $('#numMesa').focus();
+        });
+      });
+    </script>
+  </body>
+</html>
 </html>
