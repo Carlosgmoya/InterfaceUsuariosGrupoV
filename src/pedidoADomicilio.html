@@ -1,38 +1,204 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Para llevar </title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
-        crossorigin="anonymous" />
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="visualizarCarta.html">Carta</a></li>
-                  <li class="nav-item"><a class="nav-link" href="pedidoEnEstablecimiento.html">Pedir</a></li>
-                  <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page">Domicilio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="reserva.html">Reserva</a></li>
-                </ul>
+
+<head>
+  <title> Para llevar </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container-sm">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="visualizarCarta.html">Carta</a></li>
+            <li class="nav-item"><a class="nav-link" href="pedidoEnEstablecimiento.html">Pedir</a></li>
+            <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page">Domicilio</a></li>
+            <li class="nav-item"><a class="nav-link" href="reserva.html">Reserva</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="text-center bg-light mt-2">
+        <h1>Bienvenidos a restaurante V</h1>
+        <h2>Pedido a domicilio</h2>
+      </div>
+    </header>
+  
+    <div class="container-fluid">
+  
+      <div class="row">
+  
+        <div class="col-sm-9 p-3">
+  
+  
+          <div class="accordion accordion-flush" id="accordionMenu">
+  
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSopas" aria-expanded="false" aria-controls="flush-collapseSopas">
+                  Sopas
+                </button>
+              </h2>
+              <div id="flush-collapseSopas" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+                <div class="accordion-body">
+                  <div class="card">
+                    <div class="card-body">
+                      Sopa de Huevos Revueltos
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      Sopa de Tomate con Huevos
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      Sopa de Tres Delicias
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      Sopa de Wantun
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      Sopa Agripicante
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      Sopa de Aleta de Tiburon
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      Sopa de Maiz
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      Sopa de Pollo con Champiñones
+                    </div>
+                  </div>
+                </div>
               </div>
-            </nav>
-            <div class="text-center bg-light mt-2">
-              <h1>Bienvenidos a restaurante V</h1>
-              <h2>Pedido a domicilio</h2>
             </div>
-        </header>
-        <form action="index.html">
-            <input type="submit" value="Inicio">
-        </form>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
-        crossorigin="anonymous"></script>
-    </body>
+  
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEntrantes" aria-expanded="false" aria-controls="flush-collapseEntrantes">
+                  Entrantes
+                </button>
+              </h2>
+              <div id="flush-collapseEntrantes" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+                  <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+                  filled with some actual content.
+                </div>
+              </div>
+            </div>
+  
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseArrozTallarines" aria-expanded="false"
+                  aria-controls="flush-collapseArrozTallarines">
+                  Arroz-Tallarines
+                </button>
+              </h2>
+              <div id="flush-collapseArrozTallarines" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+                  <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+                  happening here in terms of content, but just filling up the space to make it look, at least at first
+                  glance, a bit more representative of how this would look in a real-world application.
+                </div>
+              </div>
+            </div>
+  
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseVerduras" aria-expanded="false" aria-controls="flush-collapseVerduras">
+                  Verduras
+                </button>
+              </h2>
+              <div id="flush-collapseVerduras" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+                <div class="accordio-body">Placeholder</div>
+              </div>
+            </div>
+  
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTernera" aria-expanded="false" aria-controls="flush-collapseTernera">
+                  Ternera
+                </button>
+              </h2>
+              <div id="flush-collapseTernera" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+                <div class="accordio-body">Placeholder</div>
+              </div>
+            </div>
+  
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapsePollo" aria-expanded="false" aria-controls="flush-collapsePollo">
+                  Pollo
+                </button>
+              </h2>
+              <div id="flush-collapsePollo" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+                <div class="accordio-body">Placeholder</div>
+              </div>
+            </div>
+  
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseCerdo" aria-expanded="false" aria-controls="flush-collapseCerdo">
+                  Cerdo
+                </button>
+              </h2>
+              <div id="flush-collapseCerdo" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+                <div class="accordio-body">Placeholder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-3 p-3 mb-2">
+  
+          <div class="card" style="width:auto;">
+            <div class="card-body">
+              <h5 class="card-title">Carrito</h5>
+              <hr>
+              <p class="card-text">Elementos</p>
+              <hr>
+              <p class="card-text">Subtotal</p>
+              <div class="d-grid mx-auto">
+                <a href="#" class="btn btn-primary">Pagar</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
