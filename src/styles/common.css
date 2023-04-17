@@ -1,12 +1,9 @@
 div#cabecera{
     position: fixed;
     top:1%;
-    width: 100%;
-    height: 40px;
+    width: 91%;
 }
 
 div#titulo{
-    display: block;
-    position: relative;
-    top:60px;
+    margin-top: 70px;
 }
