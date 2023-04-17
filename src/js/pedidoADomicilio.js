@@ -1,3 +1,5 @@
+const roundMoney = 100
+
 // Event listener para funcion addToCart
 var addToCartLinks = document.querySelectorAll(".add-to-cart");
 addToCartLinks.forEach(function(link) {
@@ -12,33 +14,51 @@ addToCartLinks.forEach(function(link) {
 // Añade un item al carrito
 function addToCart(itemName, itemPrice) {
     // Create new row for item in cart table
+    
     var newRow = document.createElement("tr");
+    var quantityCell = document.createElement("td");
+    quantityCell.innerHTML = 1;
+    newRow.appendChild(quantityCell);
     var nameCell = document.createElement("td");
     nameCell.innerHTML = itemName;
     newRow.appendChild(nameCell);
     var priceCell = document.createElement("td");
     priceCell.innerHTML = itemPrice;
     newRow.appendChild(priceCell);
-    var quantityCell = document.createElement("td");
-    quantityCell.innerHTML = 1;
-    newRow.appendChild(quantityCell);
     var removeCell = document.createElement("td");
     var removeBtn = document.createElement("button");
     removeBtn.innerHTML = "Remove";
     removeBtn.className = "btn btn-danger btn-sm";
     removeBtn.onclick = function() {
-        //removeItem(this);
+        removeItem(this);
     };
     removeCell.appendChild(removeBtn);
     newRow.appendChild(removeCell);
     document.getElementById("cart-items").appendChild(newRow);
-    //updateTotal(itemPrice);
+    updateTotal(itemPrice);
 }
 
-function removeItem(item) {
+function removeItem(button) {
 
+    var row = button.parentNode.parentNode;
+    
+    // Get the price of the item to be removed
+    var price = parseFloat(row.children[2].innerHTML);
+    
+    // Remove the row from the table
+    row.parentNode.removeChild(row);
+    
+    // Update the total by subtracting the price of the removed item
+    updateTotal(-price);
+  
 }
 
 function updateTotal(itemPrice) {
-    
+   var currentPrice = parseFloat(document.getElementById("subtotal").textContent);
+   var newPrice = currentPrice + parseFloat(itemPrice);
+
+   var newP = document.createElement('p');
+   newP.innerHTML = newPrice;
+
+   document.getElementById("subtotal").innerHTML = Math.round(newPrice*100)/100;
 }
