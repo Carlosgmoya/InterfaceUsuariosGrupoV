@@ -3,6 +3,7 @@
 
 <head>
   <title> Para llevar </title>
+  <link rel="stylesheet" type="text/css" href="styles/pedidoADomicilio.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
 </head>
@@ -10,7 +11,7 @@
 <body>
   <div class="container-sm">
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="cabecera">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -19,8 +20,7 @@
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="visualizarCarta.html">Carta</a></li>
-            <li class="nav-item"><a class="nav-link" href="pedidoEnEstablecimiento.html">Pedir</a></li>
-            <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page">Domicilio</a></li>
+            <li class="nav-item"><a class="nav-link" href="pedir.html">Pedir</a></li>
             <li class="nav-item"><a class="nav-link" href="reserva.html">Reserva</a></li>
           </ul>
         </div>
@@ -30,17 +30,17 @@
         <h2>Pedido a domicilio</h2>
       </div>
     </header>
-  
+    <a href="#" onClick="MyWindow=window.open('http://www.google.com','MyWindow','width=600,height=300'); return false;">Click Here</a>
+
     <div class="container-fluid">
-  
+
       <div class="row">
-  
+
         <div class="col-sm-9 p-3">
-  
-   
-          
+
+
           <div class="accordion accordion-flush" id="accordionMenu">
-  
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -52,63 +52,230 @@
                 <div class="accordion-body">
                   <div class="card">
                     <div class="card-body">
-                      Sopa de Huevos Revueltos
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Sopa de Huevos Revueltos
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-body">
-                      Sopa de Tomate con Huevos
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Sopa de Tomate con Huevos
+                        </div>
+                        <div class="col-auto">
+                          2,50€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-body">
-                      Sopa de Tres Delicias
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Sopa de Tres Delicias
+                        </div>
+                        <div class="col-auto">
+                          2,85€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-body">
-                      Sopa de Wantun
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Sopa de Wantun
+                        </div>
+                        <div class="col-auto">
+                          3,15€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-body">
-                      Sopa Agripicante
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Sopa Agripicante
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-body">
-                      Sopa de Aleta de Tiburon
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Sopa de Aleta de Tiburon
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-body">
-                      Sopa de Maiz
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Sopa de Maiz
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-body">
-                      Sopa de Pollo con Champiñones
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Sopa de Pollo con Champiñones
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-  
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseEntrantes" aria-expanded="false" aria-controls="flush-collapseEntrantes">
+                  data-bs-target="#flush-collapseEntrantes" aria-expanded="false"
+                  aria-controls="flush-collapseEntrantes">
                   Entrantes
                 </button>
               </h2>
               <div id="flush-collapseEntrantes" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                  <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
-                  filled with some actual content.
+                <div class="accordion-body">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Ensalada de Cangrejo
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Ensalada China
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Ensalada de Brotes de Soja
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Ensalada de Gambas
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Hojas/Pan de Gamba
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Rollo de Primavera
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Wun-tun Frito
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          Pan Chino
+                        </div>
+                        <div class="col-auto">
+                          2,35€
+                        </div>
+                      </div>
+                      <a href="#" class="stretched-link"></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-  
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -117,7 +284,8 @@
                   Arroz-Tallarines
                 </button>
               </h2>
-              <div id="flush-collapseArrozTallarines" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+              <div id="flush-collapseArrozTallarines" class="accordion-collapse collapse"
+                data-bs-parent="#accordionMenu">
                 <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
                   <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
                   happening here in terms of content, but just filling up the space to make it look, at least at first
@@ -125,7 +293,7 @@
                 </div>
               </div>
             </div>
-  
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -137,7 +305,7 @@
                 <div class="accordio-body">Placeholder</div>
               </div>
             </div>
-  
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -149,7 +317,7 @@
                 <div class="accordio-body">Placeholder</div>
               </div>
             </div>
-  
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -161,7 +329,7 @@
                 <div class="accordio-body">Placeholder</div>
               </div>
             </div>
-  
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -175,9 +343,9 @@
             </div>
           </div>
         </div>
-  
+
         <div class="col-3 p-3 mb-2">
-  
+
           <div class="card" style="width:auto;">
             <div class="card-body">
               <h5 class="card-title">Carrito</h5>
@@ -190,9 +358,9 @@
               </div>
             </div>
           </div>
-  
+
         </div>
-  
+
       </div>
     </div>
   </div>

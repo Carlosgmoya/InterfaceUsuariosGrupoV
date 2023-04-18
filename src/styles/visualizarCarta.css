@@ -1,0 +1,20 @@
+@import url("common.css");
+
+
+div#accesoRapido{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    width: 15%;
+    height: 15%;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+div#accesoRapido h1{
+    position: relative;
+    top:30px;
+    text-align: center;
+}
