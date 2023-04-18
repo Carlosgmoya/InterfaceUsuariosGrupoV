@@ -8,6 +8,7 @@
       crossorigin="anonymous" />
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles/reserva.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
 
   </head>
   <body>
@@ -26,12 +27,18 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto">
               <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
               <li class="nav-item"><a class="nav-link" href="visualizarCarta.html">Carta</a></li>
               <li class="nav-item"><a class="nav-link" href="pedir.html">Pedir</a></li>
               <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page">Reserva</a></li>
             </ul>
+            <div>
+              <button id="login">Log in</button>
+            </div>
+            <div>
+              <button id="logout">Log out</button>
+            </div>
           </div>
         </nav>
         <div class="text-center bg-light mt-2">
@@ -76,7 +83,7 @@
     </div>
 
     <script src="js/reserva.js"></script>
-    
+    <script src="js/login.js"></script>
   </body>
 </html>
 
