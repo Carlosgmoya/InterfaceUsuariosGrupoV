@@ -1,16 +1,3 @@
-async function codigo() {
-    await swal.fire({
-        allowOutsideClick: false,
-        title:"Código de la mesa",
-        showDenyButton: true,
-        confirmButtonText:"Confirmar",
-        html:`
-        <form>
-            <input class="swal2-input" placeholder="Código" id="codigo">
-        <form>
-        `,
-    });
-}
 
 // Get the button:
 let mybutton = document.getElementById("myBtn");
