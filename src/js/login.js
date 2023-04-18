@@ -3,6 +3,14 @@ baseDeDatos = JSON.parse(localStorage.getItem("sistema-de-login"));
 
 let btnLogin = document.getElementById("login");
 let btnLogout = document.getElementById("logout");
+let username = document.getElementById("username");
+
+if(localStorage.getItem("isLoggedIn")){
+    username.innerHTML = "Bienvenidos, " + localStorage.getItem("usuario");
+    username.style.display = "block";
+    btnLogin.style.display = "none";
+    btnLogout.style.display = "block";
+}
 
 if(!baseDeDatos) {
     cargarDatosIniciales()
@@ -130,12 +138,22 @@ async function login() {
         },
     });
 
+    localStorage.setItem("isLoggedIn", true);
+    localStorage.setItem("usuario", document.getElementById("usuario").value)
+
+    username.innerHTML = "Bienvenidos, " + localStorage.getItem("usuario");
+
+    username.style.display = "block";
     btnLogin.style.display = "none";
     btnLogout.style.display = "block";
     return datos;
 }
 
 btnLogout.addEventListener("click", function(){
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("usuario");
+
+    username.style.display = "none";
     btnLogin.style.display = "block";
     btnLogout.style.display = "none";
 });
