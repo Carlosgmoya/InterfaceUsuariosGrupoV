@@ -115,6 +115,10 @@ function updateTotal(itemPrice) {
    document.getElementById("subtotal").innerHTML = Math.round(newPrice*100)/100;
 }
 
+
+
+
+
 // Get the button:
 let mybutton = document.getElementById("myBtn");
 

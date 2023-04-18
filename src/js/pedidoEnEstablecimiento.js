@@ -1,17 +1,3 @@
-
-<<<<<<< HEAD
-    switch (opcion_menuBasico) {
-        case 0:
-            registrarNuevo();
-            break;
-        case 1:
-            login();
-            break;
-        default:
-            break;
-    }
-}
-
 const roundMoney = 100
 
 // Event listener para funcion addToCart
@@ -103,8 +89,7 @@ function updateTotal(itemPrice) {
    document.getElementById("subtotal").innerHTML = Math.round(newPrice*100)/100;
 }
 
-=======
->>>>>>> f6e10f2ce6232fcb067f196adca830bab8920ed0
+
 // Get the button:
 let mybutton = document.getElementById("myBtn");
 
@@ -123,9 +108,5 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-<<<<<<< HEAD
 }
 
-=======
-}
->>>>>>> f6e10f2ce6232fcb067f196adca830bab8920ed0
