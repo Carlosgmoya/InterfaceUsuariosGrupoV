@@ -1,11 +1,12 @@
 @import url("common.css");
 
 div#enlace{
-    margin-top: 20px;
-    height: 500px;
+    margin-top: 200px;
+    height: 300px;
 }
 
 button{
-    height: 500px;
-    background-color: aqua;
+    
+    height: 300px;
+    background-color: rgb(255, 128, 0);
 }
