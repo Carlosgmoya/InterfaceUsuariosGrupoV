@@ -1,12 +1,13 @@
 @import url("common.css");
 
 div#enlace{
-    position: relative;
-    top:100px;
-    height: 50%;
+    margin-top: 20px;
+    height: 500px;
 }
 
-div#enlace div a div{
+button{
+    height: 500px;
+    margin-left: 1px;
+    margin-right: 1px;
     background-color: aqua;
-    text-align: center;
 }
