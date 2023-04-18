@@ -59,6 +59,15 @@ async function pago() {
 
         }
     });
+    var carritoSize = parseInt(carrito.rows.length);
+
+    for(let i=0; i<carritoSize; i++) {
+        carrito.deleteRow(0);
+    }
+
+    var subtotal = document.getElementById("subtotal");
+
+    subtotal.innerHTML = 0;
 }
 
 function isNumeric(input){
