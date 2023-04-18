@@ -360,7 +360,7 @@
               <h5 class="card-title">Carrito</h5>
               <hr>
               <p class="card-text">Elementos</p>
-              <table>
+              <table id="MyTable">
                 <tbody id="cart-items">
                   <!-- This is where the cart items will be dynamically added using JavaScript -->
                 </tbody>
@@ -376,7 +376,7 @@
                 </div>
               </p>
               <div class="d-grid mx-auto">
-                <a href="#" class="btn btn-primary">Pagar</a>
+                <button onclick="pago()" class="btn btn-primary">Pagar</a>
               </div>
             </div>
           </div>
@@ -388,6 +388,7 @@
   </div>
 
   <script src="js/login.js"></script>
+  <script src="js/pago.js"></script>
   <script src="js/pedidoADomicilio.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
