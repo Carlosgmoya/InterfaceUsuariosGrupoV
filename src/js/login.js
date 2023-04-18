@@ -8,6 +8,7 @@ let username = document.getElementById("username");
 if(localStorage.getItem("isLoggedIn")){
     username.innerHTML = "Bienvenidos, " + localStorage.getItem("usuario");
     username.style.display = "block";
+    
     btnLogin.style.display = "none";
     btnLogout.style.display = "block";
 }
