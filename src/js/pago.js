@@ -14,9 +14,28 @@ async function error() {
     });
 }
 
+async function realizado(precio){
+    let nombre = document.getElementById("nombre").value;
+    let telefono = document.getElementById("telefono").value;
+    let direccion = document.getElementById("direccion").value;
+    await swal.fire({
+        allowOutsideClick: true,
+        title:"Detalles del pedido",
+        confirmButtonText:"Entendido",
+        html:`
+        <div>
+            <p>Nombre:${nombre}<p/>
+            <p>Telefono:${telefono}<p/>
+            <p>Direccion:${direccion}<p/>
+            <p>Precio:${precio}<p/>
+        <div/>
+        `,
+    });
+}
+
 async function pago() {
     await swal.fire({
-        allowOutsideClick: false,
+        allowOutsideClick: true,
         title:"Detalles del usuario",
         showDenyButton: true,
         denyButtonText: 'Cancelar',
@@ -67,7 +86,11 @@ async function pago() {
 
     var subtotal = document.getElementById("subtotal");
 
+    var precio = subtotal.innerHTML;
+
     subtotal.innerHTML = 0;
+
+    realizado(precio);
 }
 
 function isNumeric(input){
