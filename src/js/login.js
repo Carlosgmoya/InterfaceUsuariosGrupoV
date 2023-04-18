@@ -1,6 +1,8 @@
 
 baseDeDatos = JSON.parse(localStorage.getItem("sistema-de-login"));
 
+let myBtn = document.getElementById("login");
+
 if(!baseDeDatos) {
     cargarDatosIniciales()
 }
@@ -45,9 +47,7 @@ async function menuBasico() {
         case 1:
             login();
             break;
-
         default:
-            await menuBasico();
             break;
     }
 }
@@ -128,5 +128,12 @@ async function login() {
             return datos
         },
     });
+
+    myBtn.style.display = "none";
     return datos;
 }
+
+
+myBtn.addEventListener("click", async () => {
+    await menuBasico();
+});
