@@ -1,7 +1,8 @@
 
 baseDeDatos = JSON.parse(localStorage.getItem("sistema-de-login"));
 
-let myBtn = document.getElementById("login");
+let btnLogin = document.getElementById("login");
+let btnLogout = document.getElementById("logout");
 
 if(!baseDeDatos) {
     cargarDatosIniciales()
@@ -129,11 +130,16 @@ async function login() {
         },
     });
 
-    myBtn.style.display = "none";
+    btnLogin.style.display = "none";
+    btnLogout.style.display = "block";
     return datos;
 }
 
+btnLogout.addEventListener("click", function(){
+    btnLogin.style.display = "block";
+    btnLogout.style.display = "none";
+});
 
-myBtn.addEventListener("click", async () => {
+btnLogin.addEventListener("click", async () => {
     await menuBasico();
 });
