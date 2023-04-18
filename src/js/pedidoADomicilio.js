@@ -14,28 +14,53 @@ addToCartLinks.forEach(function(link) {
 // Añade un item al carrito
 function addToCart(itemName, itemPrice) {
     // Create new row for item in cart table
-    
-    var newRow = document.createElement("tr");
-    var quantityCell = document.createElement("td");
-    quantityCell.innerHTML = 1;
-    newRow.appendChild(quantityCell);
-    var nameCell = document.createElement("td");
-    nameCell.innerHTML = itemName;
-    newRow.appendChild(nameCell);
-    var priceCell = document.createElement("td");
-    priceCell.innerHTML = itemPrice;
-    newRow.appendChild(priceCell);
-    var removeCell = document.createElement("td");
-    var removeBtn = document.createElement("button");
-    removeBtn.innerHTML = "Remove";
-    removeBtn.className = "btn btn-danger btn-sm";
-    removeBtn.onclick = function() {
-        removeItem(this);
-    };
-    removeCell.appendChild(removeBtn);
-    newRow.appendChild(removeCell);
-    document.getElementById("cart-items").appendChild(newRow);
+    var scanCart = document.getElementById("cart-items");
+    var rows = scanCart.rows;
+
+    console.log(rows.length);
+    var cnt = 0;
+    var encontrado = false;
+    while (!encontrado && cnt < rows.length) {
+      var cells = rows[cnt].cells
+      console.log(cells[1].innerHTML);
+      if (itemName == cells[1].innerHTML) {
+
+        encontrado = true;
+        cells[0].innerHTML = parseInt(cells[0].innerHTML) + 1;
+        
+      } else {
+        cnt = cnt + 1;
+      }
+      
+    }
+
+    if (!encontrado) {
+
+      var newRow = document.createElement("tr");
+      var quantityCell = document.createElement("td");
+      quantityCell.innerHTML = 1;
+      newRow.appendChild(quantityCell);
+      var nameCell = document.createElement("td");
+      nameCell.innerHTML = itemName;
+      newRow.appendChild(nameCell);
+      var priceCell = document.createElement("td");
+      priceCell.innerHTML = itemPrice;
+      newRow.appendChild(priceCell);
+      var removeCell = document.createElement("td");
+      var removeBtn = document.createElement("button");
+      removeBtn.innerHTML = "Remove";
+      removeBtn.className = "btn btn-danger btn-sm";
+      removeBtn.onclick = function() {
+          removeItem(this);
+      };
+      removeCell.appendChild(removeBtn);
+      newRow.appendChild(removeCell);
+      document.getElementById("cart-items").appendChild(newRow);
+
+    }
+
     updateTotal(itemPrice);
+  
 }
 
 function removeItem(button) {
@@ -44,12 +69,13 @@ function removeItem(button) {
     
     // Get the price of the item to be removed
     var price = parseFloat(row.children[2].innerHTML);
+    var quantity = parseFloat(row.children[0].innerHTML);
     
     // Remove the row from the table
     row.parentNode.removeChild(row);
     
     // Update the total by subtracting the price of the removed item
-    updateTotal(-price);
+    updateTotal(-(price*quantity));
   
 }
 
