@@ -1,29 +1,33 @@
-
-async function menuBasico() {
-    opcion_menuBasico = -1
-
+async function codigo() {
     await swal.fire({
-        title: "Inicie sesión",
-        showConfirmButton:false,
+        allowOutsideClick: false,
+        title:"Código de la mesa",
+        showDenyButton: true,
+        confirmButtonText:"Confirmar",
         html:`
-            <button class="swal2-confirm swal2-styled" onclick='opcion_menuBasico=0;Swal.close()'>
-                Crear nueva cuenta
-            </button>
-            <br>
-            <button class="swal2-confirm swal2-styled" onclick='opcion_menuBasico=1;Swal.close()'>
-                Iniciar sesión
-            </button>
+        <form>
+            <input class="swal2-input" placeholder="Código" id="codigo">
+        <form>
         `,
     });
+}
 
-    switch (opcion_menuBasico) {
-        case 0:
-            registrarNuevo();
-            break;
-        case 1:
-            login();
-            break;
-        default:
-            break;
-    }
+// Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }

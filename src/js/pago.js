@@ -1,5 +1,3 @@
-
-
 async function pago() {
     await swal.fire({
         allowOutsideClick: false,
