@@ -1,21 +1,18 @@
-
-async function menuBasico() {
-    opcion_menuBasico = -1
-
+async function codigo() {
     await swal.fire({
-        title: "Inicie sesión",
-        showConfirmButton:false,
+        allowOutsideClick: false,
+        title:"Código de la mesa",
+        showDenyButton: true,
+        confirmButtonText:"Confirmar",
         html:`
-            <button class="swal2-confirm swal2-styled" onclick='opcion_menuBasico=0;Swal.close()'>
-                Crear nueva cuenta
-            </button>
-            <br>
-            <button class="swal2-confirm swal2-styled" onclick='opcion_menuBasico=1;Swal.close()'>
-                Iniciar sesión
-            </button>
+        <form>
+            <input class="swal2-input" placeholder="Código" id="codigo">
+        <form>
         `,
     });
+}
 
+<<<<<<< HEAD
     switch (opcion_menuBasico) {
         case 0:
             registrarNuevo();
@@ -119,6 +116,8 @@ function updateTotal(itemPrice) {
    document.getElementById("subtotal").innerHTML = Math.round(newPrice*100)/100;
 }
 
+=======
+>>>>>>> f6e10f2ce6232fcb067f196adca830bab8920ed0
 // Get the button:
 let mybutton = document.getElementById("myBtn");
 
@@ -137,5 +136,9 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> f6e10f2ce6232fcb067f196adca830bab8920ed0
