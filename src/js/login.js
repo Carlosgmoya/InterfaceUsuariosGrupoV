@@ -96,13 +96,25 @@ async function registrarNuevo() {
     });
     switch (opcion_registrar) {
         case 0:
-            menuBasico();
+            exito();
             break;
         case 1:
             menuBasico();
         default:
             break;
     }
+}
+
+async function exito(){
+    await swal.fire({
+        confirmButtonText:"Entendido",
+        html:`
+            <h1>Cuenta creado!<h1>
+            <h2>Ya puedes iniciar sesion!<h2>
+        `,
+    });
+
+    menuBasico();
 }
 
 async function login() {
@@ -157,7 +169,18 @@ btnLogout.addEventListener("click", function(){
     username.style.display = "none";
     btnLogin.style.display = "block";
     btnLogout.style.display = "none";
+    cerrarSesion();
 });
+
+
+async function cerrarSesion(){
+    await swal.fire({
+        confirmButtonText:"Entendido",
+        html:`
+            <h1>Sesion cerrado<h1>
+        `,
+    });
+}
 
 btnLogin.addEventListener("click", async () => {
     await menuBasico();
