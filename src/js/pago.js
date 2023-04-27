@@ -33,12 +33,14 @@ async function realizado(precio){
     });
 }
 
+
 async function pago() {
     await swal.fire({
         allowOutsideClick: true,
         title:"Detalles del usuario",
         showDenyButton: true,
-        denyButtonText: 'Cancelar',
+        denyButtonColor: '#d33',
+        denyButtonText: 'Volver',
         confirmButtonText:"Pedir",
         html:`
         <form>
@@ -75,22 +77,19 @@ async function pago() {
                 Swal.showValidationMessage("No has elegido método de pago")
                 return false;
             }
-
+        }
+    }).then((result) => {
+        if (result.isDenied) {
+            swal.fire({
+                title: 'Pedido cancelado',
+            });
+        } else {
+            var subtotal = document.getElementById("subtotal");
+            var precio = subtotal.innerHTML;
+            subtotal.innerHTML = 0;
+            realizado(precio);
         }
     });
-    var carritoSize = parseInt(carrito.rows.length);
-
-    for(let i=0; i<carritoSize; i++) {
-        carrito.deleteRow(0);
-    }
-
-    var subtotal = document.getElementById("subtotal");
-
-    var precio = subtotal.innerHTML;
-
-    subtotal.innerHTML = 0;
-
-    realizado(precio);
 }
 
 function isNumeric(input){
