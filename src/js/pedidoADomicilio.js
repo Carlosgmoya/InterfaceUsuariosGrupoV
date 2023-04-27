@@ -64,6 +64,7 @@ function addToCart(itemName, itemPrice, itemQuantity) {
     if (!encontrado) {
 
       var newRow = document.createElement("tr");
+      newRow.setAttribute('tabindex', '0');
       var quantityCell = document.createElement("td");
       quantityCell.innerHTML = itemQuantity;
       newRow.appendChild(quantityCell);

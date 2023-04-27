@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title> Carta </title>
         <link rel="stylesheet" type="text/css" href="styles/visualizarCarta.css">
@@ -44,6 +44,8 @@
           <button id="pedir">Pedir ya!</button>
         </a>
 
+        <button onclick="leyendaFunction()" id="myBtn2" title="Leyenda">Leyenda</button>
+
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
         <div class="container py-5">
@@ -52,7 +54,7 @@
                 <h1 class="mt-0 text-primary">Nuestra Carta</h1>
             </div>
             <div class="col-12 mt-4">
-              <h3 class="text-center">Sopas</h3>
+              <h2 class="text-center">Sopas</h2>
               <hr class="accent my-5">
             </div>
             <div class="row row-cols-3 g-3">
@@ -60,9 +62,9 @@
                   <div class="card">
                     <div class="card-body">
                       <span class="float-end fw-bold">2.35€</span>
-                      <h6 class="card-title">Sopa de Huevos Revueltos</h6>
-                      <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
+                      <p class="card-title fw-bold">Sopa de Huevos Revueltos</p>
+                      <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
                     </div>
                   </div>
                 </div>
@@ -70,10 +72,10 @@
                   <div class="card">
                     <div class="card-body">
                       <span class="float-end fw-bold">2.50€</span>
-                      <h6 class="card-title">Sopa de Tomate con Huevos</h6>
-                      <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/sesamo.png" width="30" height="30"/>
+                      <p class="card-title fw-bold">Sopa de Tomate con Huevos</p>
+                      <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/sesamo.png" alt="sesamo" width="30" height="30"/>
                     </div>
                   </div>
                 </div>
@@ -81,10 +83,10 @@
                   <div class="card">
                     <div class="card-body">
                       <span class="float-end fw-bold">2.85€</span>
-                      <h6 class="card-title">Sopa de Tres Delicias</h6>
-                      <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/altramuz.png" width="30" height="30"/>
+                      <p class="card-title fw-bold">Sopa de Tres Delicias</p>
+                      <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/altramuz.png" alt="altramuz" width="30" height="30"/>
                     </div>
                   </div>
                 </div>
@@ -92,10 +94,10 @@
                   <div class="card">
                     <div class="card-body">
                       <span class="float-end fw-bold">3.15€</span>
-                      <h6 class="card-title">Sopa de Wan Tun</h6>
-                      <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                      <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                      <p class="card-title fw-bold">Sopa de Wan Tun</p>
+                      <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                      <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                     </div>
                   </div>
                 </div>
@@ -103,10 +105,10 @@
                   <div class="card">
                     <div class="card-body">
                       <span class="float-end fw-bold">2.65€</span>
-                      <h6 class="card-title">Sopa Agripicante</h6>
-                      <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
+                      <p class="card-title fw-bold">Sopa Agripicante</p>
+                      <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
                     </div>
                   </div>
                 </div>
@@ -114,11 +116,11 @@
                   <div class="card">
                     <div class="card-body">
                       <span class="float-end fw-bold">3.15€</span>
-                      <h6 class="card-title">Sopa de Aleta de Tiburon</h6>
-                      <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/altramuz.png" width="30" height="30"/>
+                      <p class="card-title fw-bold">Sopa de Aleta de Tiburon</p>
+                      <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/altramuz.png" alt="altramuz" width="30" height="30"/>
                     </div>
                   </div>
                 </div>
@@ -126,10 +128,10 @@
                   <div class="card">
                     <div class="card-body">
                       <span class="float-end fw-bold">2.60€</span>
-                      <h6 class="card-title">Sopa de Maiz</h6>
-                      <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
-                      <img class="card-img-fluid float-end" src="images/altramuz.png" width="30" height="30"/>
+                      <p class="card-title fw-bold">Sopa de Maiz</p>
+                      <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
+                      <img class="card-img-fluid float-end" src="images/altramuz.png" alt="altramuz" width="30" height="30"/>
                     </div>
                   </div>
                 </div>
@@ -137,9 +139,9 @@
                   <div class="card">
                     <div class="card-body">
                       <span class="float-end fw-bold">2.50€</span>
-                      <h6 class="card-title">Sopa de Pollo con Champiñones</h6>
-                      <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                      <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                      <p class="card-title fw-bold">Sopa de Pollo con Champiñones</p>
+                      <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                      <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                     </div>
                   </div>
                 </div>
@@ -155,8 +157,8 @@
                     <div class="card">
                       <div class="card-body">
                         <span class="float-end fw-bold">4.15€</span>
-                        <h6 class="card-title">Ensalada de Cangrejo</h6>
-                        <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
+                        <p class="card-title fw-bold">Ensalada de Cangrejo</p>
+                        <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
                       </div>
                     </div>
                   </div>
@@ -164,8 +166,8 @@
                     <div class="card">
                       <div class="card-body">
                         <span class="float-end fw-bold">3.10€</span>
-                        <h6 class="card-title">Ensalada China</h6>
-                        <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                        <p class="card-title fw-bold">Ensalada China</p>
+                        <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                       </div>
                     </div>
                   </div>
@@ -173,9 +175,9 @@
                     <div class="card">
                       <div class="card-body">
                         <span class="float-end fw-bold">3.60€</span>
-                        <h6 class="card-title">Ensalada Brotes Hoja</h6>
-                        <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                        <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                        <p class="card-title fw-bold">Ensalada Brotes Hoja</p>
+                        <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                        <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                       </div>
                     </div>
                   </div>
@@ -183,8 +185,8 @@
                     <div class="card">
                       <div class="card-body">
                         <span class="float-end fw-bold">4.50€</span>
-                        <h6 class="card-title">Ensalada de Gambas</h6>
-                        <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
+                        <p class="card-title fw-bold">Ensalada de Gambas</p>
+                        <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
                       </div>
                     </div>
                   </div>
@@ -192,8 +194,8 @@
                     <div class="card">
                       <div class="card-body">
                         <span class="float-end fw-bold">2.50€</span>
-                        <h6 class="card-title">Hojas/Pan de Gambas</h6>
-                        <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
+                        <p class="card-title fw-bold">Hojas/Pan de Gambas</p>
+                        <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
                       </div>
                     </div>
                   </div>
@@ -201,10 +203,10 @@
                     <div class="card">
                       <div class="card-body">
                         <span class="float-end fw-bold">1.60€</span>
-                        <h6 class="card-title">Rollo Primavera</h6>
-                        <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                        <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                        <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                        <p class="card-title fw-bold">Rollo Primavera</p>
+                        <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                        <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                        <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                       </div>
                     </div>
                   </div>
@@ -212,9 +214,9 @@
                     <div class="card">
                       <div class="card-body">
                         <span class="float-end fw-bold">2.85€</span>
-                        <h6 class="card-title">Wun-Tun Frito</h6>
-                        <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                        <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                        <p class="card-title fw-bold">Wun-Tun Frito</p>
+                        <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                        <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                       </div>
                     </div>
                   </div>
@@ -222,9 +224,9 @@
                     <div class="card">
                       <div class="card-body">
                         <span class="float-end fw-bold">1.70€</span>
-                        <h6 class="card-title">Pan Chino</h6>
-                        <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                        <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                        <p class="card-title fw-bold">Pan Chino</p>
+                        <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                        <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                       </div>
                     </div>
                   </div>
@@ -239,10 +241,10 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">4.05€</span>
-                  <h6 class="card-title">Tallarines Fritos con Ternera</h6>
-                  <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Tallarines Fritos con Ternera</p>
+                  <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -250,10 +252,10 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">4.05€</span>
-                  <h6 class="card-title">Tallarines Fritos con Pollo</h6>
-                  <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Tallarines Fritos con Pollo</p>
+                  <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -261,10 +263,10 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">4.55€</span>
-                  <h6 class="card-title">Tallarines Fritos con Gambas</h6>
-                  <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Tallarines Fritos con Gambas</p>
+                  <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -272,10 +274,10 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">5.65€</span>
-                  <h6 class="card-title">Tallarines Tres Delicias Plancha</h6>
-                  <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Tallarines Tres Delicias Plancha</p>
+                  <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -283,10 +285,10 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">4.85€</span>
-                  <h6 class="card-title">Tallarines Fritos Tres Delicias</h6>
-                  <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Tallarines Fritos Tres Delicias</p>
+                  <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -294,10 +296,10 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">5.15€</span>
-                  <h6 class="card-title">Fideo Chino con Tres Delicias</h6>
-                  <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Fideo Chino con Tres Delicias</p>
+                  <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -305,9 +307,9 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">4.25€</span>
-                  <h6 class="card-title">Arroz Frito con Curry</h6>
-                  <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
-                  <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                  <p class="card-title fw-bold">Arroz Frito con Curry</p>
+                  <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
+                  <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -315,9 +317,9 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">4.55€</span>
-                  <h6 class="card-title">Arroz con Curry y Ternera</h6>
-                  <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Arroz con Curry y Ternera</p>
+                  <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -325,9 +327,9 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">4.35€</span>
-                  <h6 class="card-title">Arroz Frito con Ternera</h6>
-                  <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Arroz Frito con Ternera</p>
+                  <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -335,9 +337,9 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">3.95€</span>
-                  <h6 class="card-title">Arroz Frito con Tres Delicias</h6>
-                  <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Arroz Frito con Tres Delicias</p>
+                  <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -345,10 +347,10 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">4.55€</span>
-                  <h6 class="card-title">Arroz Frito con Gambas</h6>
-                  <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Arroz Frito con Gambas</p>
+                  <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -356,10 +358,10 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">5.15€</span>
-                  <h6 class="card-title">Arroz Frito de la Casa</h6>
-                  <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
+                  <p class="card-title fw-bold">Arroz Frito de la Casa</p>
+                  <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -367,8 +369,8 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">2.20€</span>
-                  <h6 class="card-title">Arroz Blanco</h6>
-                  <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                  <p class="card-title fw-bold">Arroz Blanco</p>
+                  <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -376,10 +378,10 @@
               <div class="card">
                 <div class="card-body">
                   <span class="float-end fw-bold">5.15€</span>
-                  <h6 class="card-title">Udon Frito</h6>
-                  <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                  <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
-                  <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                  <p class="card-title fw-bold">Udon Frito</p>
+                  <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                  <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
+                  <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
                 </div>
               </div>
             </div>
@@ -393,10 +395,10 @@
             <div class="card">
               <div class="card-body">
                 <span class="float-end fw-bold">3.95€</span>
-                <h6 class="card-title">Verduras Salteadas Variadas</h6>
-                <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                <img class="card-img-fluid float-end" src="images/sesamo.png" width="30" height="30"/>
-                <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                <p class="card-title fw-bold">Verduras Salteadas Variadas</p>
+                <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                <img class="card-img-fluid float-end" src="images/sesamo.png" alt="sesamo" width="30" height="30"/>
+                <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
               </div>
             </div>
           </div>
@@ -404,9 +406,9 @@
             <div class="card">
               <div class="card-body">
                 <span class="float-end fw-bold">4.25€</span>
-                <h6 class="card-title">Brotes de Soja Fritos</h6>
-                <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                <p class="card-title fw-bold">Brotes de Soja Fritos</p>
+                <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
               </div>
             </div>
           </div>
@@ -414,11 +416,11 @@
             <div class="card">
               <div class="card-body">
                 <span class="float-end fw-bold">4.35€</span>
-                <h6 class="card-title">Bambu y Seta China</h6>
-                <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-                <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-                <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
-                <img class="card-img-fluid" src="images/vegano.jpg" width="30" height="30"/>
+                <p class="card-title fw-bold">Bambu y Seta China</p>
+                <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+                <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+                <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
+                <img class="card-img-fluid" src="images/vegano.jpg" alt="vegano" width="30" height="30"/>
               </div>
             </div>
           </div>
@@ -426,8 +428,8 @@
             <div class="card">
               <div class="card-body">
                 <span class="float-end fw-bold">3.95€</span>
-                <h6 class="card-title">Huevos Revueltos con Jamon</h6>
-                <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
+                <p class="card-title fw-bold">Huevos Revueltos con Jamon</p>
+                <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
               </div>
             </div>
           </div>
@@ -435,9 +437,9 @@
             <div class="card">
               <div class="card-body">
                 <span class="float-end fw-bold">4.35€</span>
-                <h6 class="card-title">Huevos Revueltos con Gambas</h6>
-                <img class="card-img-fluid float-end" src="images/crustaceo.png" width="30" height="30"/>
-                <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
+                <p class="card-title fw-bold">Huevos Revueltos con Gambas</p>
+                <img class="card-img-fluid float-end" src="images/crustaceo.png" alt="crustaceo" width="30" height="30"/>
+                <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
               </div>
             </div>
           </div>
@@ -451,8 +453,8 @@
           <div class="card">
             <div class="card-body">
               <span class="float-end fw-bold">5.25€</span>
-              <h6 class="card-title">Verdura con Ternera</h6>
-              <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
+              <p class="card-title fw-bold">Verdura con Ternera</p>
+              <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
             </div>
           </div>
         </div>
@@ -460,8 +462,8 @@
           <div class="card">
             <div class="card-body">
               <span class="float-end fw-bold">5.95€</span>
-              <h6 class="card-title">Ternera con Salsa de Ostras</h6>
-              <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
+              <p class="card-title fw-bold">Ternera con Salsa de Ostras</p>
+              <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
             </div>
           </div>
         </div>
@@ -469,9 +471,9 @@
           <div class="card">
             <div class="card-body">
               <span class="float-end fw-bold">5.25€</span>
-              <h6 class="card-title">Ternera con Zanahorias/Cebolla</h6>
-              <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-              <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
+              <p class="card-title fw-bold">Ternera con Zanahorias/Cebolla</p>
+              <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+              <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
             </div>
           </div>
         </div>
@@ -479,9 +481,9 @@
           <div class="card">
             <div class="card-body">
               <span class="float-end fw-bold">5.25€</span>
-              <h6 class="card-title">Ternera con Pimientos Verdes</h6>
-              <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-              <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
+              <p class="card-title fw-bold">Ternera con Pimientos Verdes</p>
+              <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+              <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
             </div>
           </div>
         </div>
@@ -489,8 +491,8 @@
           <div class="card">
             <div class="card-body">
               <span class="float-end fw-bold">5.95€</span>
-              <h6 class="card-title">Ternera con Sala al Curry</h6>
-              <img class="card-img-fluid float-end" src="images/lacteos.png" width="30" height="30"/>
+              <p class="card-title fw-bold">Ternera con Sala al Curry</p>
+              <img class="card-img-fluid float-end" src="images/lacteos.png" alt="lacteos" width="30" height="30"/>
             </div>
           </div>
         </div>
@@ -505,9 +507,9 @@
         <div class="card">
           <div class="card-body">
             <span class="float-end fw-bold">5.25€</span>
-            <h6 class="card-title">Pollo Agridulce</h6>
-            <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-            <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
+            <p class="card-title fw-bold">Pollo Agridulce</p>
+            <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+            <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
           </div>
         </div>
       </div>
@@ -515,8 +517,8 @@
         <div class="card">
           <div class="card-body">
             <span class="float-end fw-bold">5.25€</span>
-            <h6 class="card-title">Pollo con Guindillas</h6>
-            <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
+            <p class="card-title fw-bold">Pollo con Guindillas</p>
+            <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
           </div>
         </div>
       </div>
@@ -524,8 +526,8 @@
         <div class="card">
           <div class="card-body">
             <span class="float-end fw-bold">5.25€</span>
-            <h6 class="card-title">Verdura con Pollo</h6>
-            <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
+            <p class="card-title fw-bold">Verdura con Pollo</p>
+            <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
           </div>
         </div>
       </div>
@@ -533,9 +535,9 @@
         <div class="card">
           <div class="card-body">
             <span class="float-end fw-bold">5.25€</span>
-            <h6 class="card-title">Pollo con Limon</h6>
-            <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-            <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
+            <p class="card-title fw-bold">Pollo con Limon</p>
+            <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+            <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
           </div>
         </div>
       </div>
@@ -543,8 +545,8 @@
         <div class="card">
           <div class="card-body">
             <span class="float-end fw-bold">5.25€</span>
-            <h6 class="card-title">Pollo con Sala al Curry</h6>
-            <img class="card-img-fluid float-end" src="images/lacteos.png" width="30" height="30"/>
+            <p class="card-title fw-bold">Pollo con Sala al Curry</p>
+            <img class="card-img-fluid float-end" src="images/lacteos.png" alt="lacteos" width="30" height="30"/>
           </div>
         </div>
       </div>
@@ -559,8 +561,8 @@
       <div class="card">
         <div class="card-body">
           <span class="float-end fw-bold">5.25€</span>
-          <h6 class="card-title">Verdura con Cerdo</h6>
-          <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
+          <p class="card-title fw-bold">Verdura con Cerdo</p>
+          <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
         </div>
       </div>
     </div>
@@ -568,10 +570,10 @@
       <div class="card">
         <div class="card-body">
           <span class="float-end fw-bold">5.25€</span>
-          <h6 class="card-title">Cerdo Agridulce</h6>
-          <img class="card-img-fluid float-end" src="images/cereales.png" width="30" height="30"/>
-          <img class="card-img-fluid float-end" src="images/huevos.png" width="30" height="30"/>
-          <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
+          <p class="card-title fw-bold">Cerdo Agridulce</p>
+          <img class="card-img-fluid float-end" src="images/cereales.png" alt="cereales" width="30" height="30"/>
+          <img class="card-img-fluid float-end" src="images/huevos.png" alt="huevos" width="30" height="30"/>
+          <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
         </div>
       </div>
     </div>
@@ -579,10 +581,10 @@
       <div class="card">
         <div class="card-body">
           <span class="float-end fw-bold">5.95€</span>
-          <h6 class="card-title">Costillas a las 5 Especias</h6>
-          <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-          <img class="card-img-fluid float-end" src="images/moluscos.png" width="30" height="30"/>
-          <img class="card-img-fluid float-end" src="images/sulfitos.png" width="30" height="30"/>
+          <p class="card-title fw-bold">Costillas a las 5 Especias</p>
+          <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+          <img class="card-img-fluid float-end" src="images/moluscos.png" alt="moluscos" width="30" height="30"/>
+          <img class="card-img-fluid float-end" src="images/sulfitos.png" alt="sulfitos" width="30" height="30"/>
         </div>
       </div>
     </div>
@@ -590,9 +592,9 @@
       <div class="card">
         <div class="card-body">
           <span class="float-end fw-bold">6.15€</span>
-          <h6 class="card-title">Costillas Asadas</h6>
-          <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
-          <img class="card-img-fluid float-end" src="images/moluscos.png" width="30" height="30"/>
+          <p class="card-title fw-bold">Costillas Asadas</p>
+          <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
+          <img class="card-img-fluid float-end" src="images/moluscos.png" alt="moluscos" width="30" height="30"/>
         </div>
       </div>
     </div>
@@ -600,8 +602,8 @@
       <div class="card">
         <div class="card-body">
           <span class="float-end fw-bold">5.25€</span>
-          <h6 class="card-title">Cerdo con Bambu y Seta China</h6>
-          <img class="card-img-fluid float-end" src="images/soja.png" width="30" height="30"/>
+          <p class="card-title fw-bold">Cerdo con Bambu y Seta China</p>
+          <img class="card-img-fluid float-end" src="images/soja.png" alt="soja" width="30" height="30"/>
         </div>
       </div>
     </div>
