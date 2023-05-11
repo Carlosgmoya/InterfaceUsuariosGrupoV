@@ -3,38 +3,27 @@ const roundMoney = 100
 // Event listener para funcion addToCart
 var addToCartLinks = document.querySelectorAll(".add-to-cart");
 addToCartLinks.forEach(function(link) {
-  link.addEventListener("click", function(event) {
-    event.preventDefault(); // previene que el link redirija a otra pagina
+  link.addEventListener("click", async () =>{
     var itemName = link.parentNode.dataset.itemName;
     var itemPrice = link.parentNode.dataset.itemPrice;
-    selectQuantity(itemName, itemPrice);
-  });
+    selectQuantity(itemName, itemPrice)
+  })
 });
 
 //Abre una ventana popup para seleccionar la cantidad del producto a añadir
-function selectQuantity(itemName, itemPrice) {
-  // Create a popup window
-  var popup = window.open("", "popup", "width=300,height=200");
-
-  // Add a quantity selector to the popup window
-  var label = document.createElement("label");
-  label.textContent = "Cantidad: ";
-  var input = document.createElement("input");
-  input.type = "number";
-  input.min = "1";
-  input.max = "10";
-  input.value = "1";
-  var button = document.createElement("button");
-  button.textContent = "Añadir al carrito";
-  button.addEventListener("click", function() {
-    // When the button is clicked, add the selected quantity to the cart
-    var quantity = input.value;
-    addToCart(itemName, itemPrice, quantity);
-    popup.close();
+async function selectQuantity(itemName, itemPrice) {
+  await swal.fire({
+    title: "Cantidad",
+    showConfirmButton:true,
+    confirmButtonText: "Confirmar",
+    html:`
+      <form>
+        <input class="swal2-input" type="number" placeholder="cantidad" id="cantidad" value="1">
+      <form>
+      `
   });
-  popup.document.body.appendChild(label);
-  popup.document.body.appendChild(input);
-  popup.document.body.appendChild(button);
+
+  addToCart(itemName, itemPrice, document.getElementById("cantidad").value);
 }
 
 // Añade un item al carrito
