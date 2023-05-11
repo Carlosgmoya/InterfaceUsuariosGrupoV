@@ -7,3 +7,8 @@
     margin: 0 auto;
     max-width: 500px;
   }
+
+#botonConfirmacion {
+  background-color: #1aca20;
+  border-radius: 8px;
+}
