@@ -5,6 +5,9 @@ let cuentaBtn = document.getElementById("btnCuenta");
 let carritoParaEnviar = document.getElementById("cart-items");
 let carritoPreparacion = document.getElementById("realizado-items");
 
+let subtotalCarrito = document.getElementById("subtotal");
+let subtotalPreparacion = document.getElementById("subtotalPreparacion");
+
 cuentaBtn.addEventListener("click", async () => {
   if(carritoPreparacion.rows.length == 0){
     error();
@@ -72,8 +75,6 @@ async function enviarACocina(){
     if (result.isDenied) {
 
     } else {
-      var subtotal = document.getElementById("subtotal");
-      subtotal.innerHTML = 0;
       addToPreparacion();
     }
 });
@@ -109,8 +110,11 @@ function addToPreparacion(){
     
   }
 
+  
+  updateTotalPreparacion(subtotalCarrito.innerHTML);
+
   carritoParaEnviar.innerHTML = null;
-  updateTotalPreparacion(Math.round(itemPrice*itemQuantity*100)/100);
+  subtotalCarrito.innerHTML = 0;
   
 }
 

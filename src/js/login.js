@@ -121,6 +121,7 @@ async function login() {
     let {value : datos} = await swal.fire({
         title:"Iniciar sesion",
         confirmButtonText:"Login",
+        denyButtonText:"Cancelar",
         html:`
         <div style="margin:5px">
             <input class="swal2-input" placeholder="Usuario" id="usuario">
@@ -149,17 +150,23 @@ async function login() {
             }
             return datos
         },
+    }).then((result) => {
+        if (result.isDenied) {
+    
+        } else {
+            localStorage.setItem("isLoggedIn", true);
+            localStorage.setItem("usuario", document.getElementById("usuario").value)
+        
+            username.innerHTML = "Bienvenidos, " + localStorage.getItem("usuario");
+        
+            username.style.display = "block";
+            btnLogin.style.display = "none";
+            btnLogout.style.display = "block";
+            return datos;
+        }
     });
 
-    localStorage.setItem("isLoggedIn", true);
-    localStorage.setItem("usuario", document.getElementById("usuario").value)
-
-    username.innerHTML = "Bienvenidos, " + localStorage.getItem("usuario");
-
-    username.style.display = "block";
-    btnLogin.style.display = "none";
-    btnLogout.style.display = "block";
-    return datos;
+    
 }
 
 btnLogout.addEventListener("click", function(){
