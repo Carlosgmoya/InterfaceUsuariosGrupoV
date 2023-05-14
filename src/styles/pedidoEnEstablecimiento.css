@@ -20,13 +20,13 @@
     background-color: #555; /* Add a dark-grey background on hover */
 }
 
-#btnPay {
+#btnEnviar, #btnCuenta {
     transition-duration: 0.4s;
     background-color: #4CAF50; /* Green */
     color: white;
 }
   
-#btnPay:hover {
+#btnEnviar:hover, #btnCuenta:hover {
     background-color: #3d8f40; /* Green */
 
 }

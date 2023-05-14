@@ -220,7 +220,7 @@ async function realizado(precio){
             <p>Precio:${precio}<p/>
         <div/>
         `,
-    });
+    })
 }
 
 
@@ -277,6 +277,7 @@ async function pago() {
             var subtotal = document.getElementById("subtotal");
             var precio = subtotal.innerHTML;
             subtotal.innerHTML = 0;
+            carrito.innerHTML = null;
             realizado(precio);
         }
     });

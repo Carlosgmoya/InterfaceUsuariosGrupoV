@@ -12,18 +12,25 @@ addToCartLinks.forEach(function(link) {
 
 //Abre una ventana popup para seleccionar la cantidad del producto a añadir
 async function selectQuantity(itemName, itemPrice) {
+  let opcion = 0;
   await swal.fire({
     title: "Cantidad",
     showConfirmButton:true,
+    showDenyButton:true,
+    denyButtonText:"Cancelar",
     confirmButtonText: "Confirmar",
     html:`
       <form>
         <input class="swal2-input" type="number" placeholder="cantidad" id="cantidad" value="1">
       <form>
       `
-  });
+  }).then((result) => {
+    if (result.isDenied) {
 
-  addToCart(itemName, itemPrice, document.getElementById("cantidad").value);
+    } else {
+      addToCart(itemName, itemPrice, document.getElementById("cantidad").value);
+    }
+});
 }
 
 // Añade un item al carrito
@@ -37,11 +44,11 @@ function addToCart(itemName, itemPrice, itemQuantity) {
     var encontrado = false;
     while (!encontrado && cnt < rows.length) {
       var cells = rows[cnt].cells
-      console.log(cells[1].innerHTML);
-      if (itemName == cells[1].innerHTML) {
+      console.log(cells[0].innerHTML);
+      if (itemName == cells[0].innerHTML) {
 
         encontrado = true;
-        cells[0].innerHTML = parseInt(cells[0].innerHTML) + parseInt(itemQuantity);
+        cells[1].innerHTML = parseInt(cells[1].innerHTML) + parseInt(itemQuantity);
         cells[2].innerHTML = Math.round((parseFloat(cells[2].innerHTML) + itemPrice*itemQuantity) * 100)/100;
         
       } else {
@@ -54,12 +61,12 @@ function addToCart(itemName, itemPrice, itemQuantity) {
 
       var newRow = document.createElement("tr");
       newRow.setAttribute('tabindex', '0');
-      var quantityCell = document.createElement("td");
-      quantityCell.innerHTML = itemQuantity;
-      newRow.appendChild(quantityCell);
       var nameCell = document.createElement("td");
       nameCell.innerHTML = itemName;
       newRow.appendChild(nameCell);
+      var quantityCell = document.createElement("td");
+      quantityCell.innerHTML = itemQuantity;
+      newRow.appendChild(quantityCell);
       var priceCell = document.createElement("td");
       priceCell.innerHTML = Math.round(itemPrice*itemQuantity*100)/100;
       newRow.appendChild(priceCell);

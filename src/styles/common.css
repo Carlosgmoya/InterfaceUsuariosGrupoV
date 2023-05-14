@@ -1,5 +1,13 @@
 #logout{
     display: none;
+    border-radius: 10%;
+    background-color: red;
+    color: white;
+}
+
+#login{
+    border-radius: 10%;
+    background-color: aqua;
 }
 
 #username{

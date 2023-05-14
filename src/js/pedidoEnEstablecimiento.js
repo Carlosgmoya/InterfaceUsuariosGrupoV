@@ -1,40 +1,159 @@
 const roundMoney = 100
 
+let enviarBtn = document.getElementById("btnEnviar");
+let cuentaBtn = document.getElementById("btnCuenta");
+let carritoParaEnviar = document.getElementById("cart-items");
+let carritoPreparacion = document.getElementById("realizado-items");
+
+cuentaBtn.addEventListener("click", async () => {
+  if(carritoPreparacion.rows.length == 0){
+    error();
+  }else{
+    pedirCuenta();
+  }
+});
+
+async function pedirCuenta(){
+  await swal.fire({
+    title: "Pedir cuenta",
+    showConfirmButton:true,
+    showDenyButton:true,
+    denyButtonText:"Cancelar",
+    confirmButtonText: "Confirmar",
+    html:`
+      <p>Deseas pedir la cuenta?<p/>
+      `
+  }).then((result) => {
+    if (result.isDenied) {
+
+    } else {
+      document.getElementById("subtotalPreparacion").innerHTML = 0;
+      carritoPreparacion.innerHTML = null;
+      cuentaPedido();
+    }
+});
+}
+
+async function cuentaPedido(){
+  await swal.fire({
+    title:"Ya has pedido la cuenta!",
+    html:`
+    <h1>Espera en la mesa, te atenderemos con mayor brevedad posible.<h1>
+    <h2>Gracias por su colaboracióon<h2>
+    `
+});
+}
+
+enviarBtn.addEventListener("click", async () => {
+  if(carritoParaEnviar.rows.length == 0){
+    error();
+  }else{
+    enviarACocina();
+  }
+});
+
+async function error() {
+  await swal.fire({
+      title:"Carrito vacío !",
+  });
+}
+
+async function enviarACocina(){
+  await swal.fire({
+    title: "Confirmacion",
+    showConfirmButton:true,
+    showDenyButton:true,
+    denyButtonText:"Cancelar",
+    confirmButtonText: "Confirmar",
+    html:`
+      <p>Deseas enviar los productos a cocina?<p/>
+      `
+  }).then((result) => {
+    if (result.isDenied) {
+
+    } else {
+      var subtotal = document.getElementById("subtotal");
+      subtotal.innerHTML = 0;
+      addToPreparacion();
+    }
+});
+}
+
+function addToPreparacion(){
+
+  var rows = carritoParaEnviar.rows;
+
+  console.log(rows.length);
+  var cnt = 0;
+  while (cnt < rows.length) {
+    var cells = rows[cnt].cells
+
+    var newRow = document.createElement("tr");
+    newRow.setAttribute('tabindex', '0');
+    var nameCell = document.createElement("td");
+    nameCell.innerHTML = cells[0].innerHTML;
+    newRow.appendChild(nameCell);
+    var quantityCell = document.createElement("td");
+    quantityCell.innerHTML = cells[1].innerHTML;
+    newRow.appendChild(quantityCell);
+    var priceCell = document.createElement("td");
+    priceCell.innerHTML = cells[2].innerHTML;
+    newRow.appendChild(priceCell);
+    var estadoCell = document.createElement("td");
+    estadoCell.innerHTML = "En preparacion"
+    newRow.appendChild(estadoCell);
+
+    carritoPreparacion.appendChild(newRow);
+
+    cnt = cnt + 1
+    
+  }
+
+  carritoParaEnviar.innerHTML = null;
+  updateTotalPreparacion(Math.round(itemPrice*itemQuantity*100)/100);
+  
+}
+
+function updateTotalPreparacion(itemPrice) {
+  var currentPrice = parseFloat(document.getElementById("subtotalPreparacion").textContent);
+  var newPrice = currentPrice + parseFloat(itemPrice);
+
+  var newP = document.createElement('p');
+  newP.innerHTML = newPrice;
+
+  document.getElementById("subtotalPreparacion").innerHTML = Math.round(newPrice*100)/100;
+}
+
 // Event listener para funcion addToCart
 var addToCartLinks = document.querySelectorAll(".add-to-cart");
 addToCartLinks.forEach(function(link) {
-  link.addEventListener("click", function(event) {
-    event.preventDefault(); // previene que el link redirija a otra pagina
+  link.addEventListener("click", async () =>{
     var itemName = link.parentNode.dataset.itemName;
     var itemPrice = link.parentNode.dataset.itemPrice;
-    selectQuantity(itemName, itemPrice);
-  });
+    selectQuantity(itemName, itemPrice)
+  })
 });
 
 //Abre una ventana popup para seleccionar la cantidad del producto a añadir
-function selectQuantity(itemName, itemPrice) {
-  // Create a popup window
-  var popup = window.open("", "popup", "width=300,height=200");
+async function selectQuantity(itemName, itemPrice) {
+  await swal.fire({
+    title: "Cantidad",
+    showConfirmButton:true,
+    showDenyButton:true,
+    denyButtonText:"Cancelar",
+    confirmButtonText: "Confirmar",
+    html:`
+      <form>
+        <input class="swal2-input" type="number" placeholder="cantidad" id="cantidad" value="1">
+      <form>
+      `
+  }).then((result) => {
+    if (result.isDenied) {
 
-  // Add a quantity selector to the popup window
-  var label = document.createElement("label");
-  label.textContent = "Cantidad: ";
-  var input = document.createElement("input");
-  input.type = "number";
-  input.min = "1";
-  input.max = "10";
-  input.value = "1";
-  var button = document.createElement("button");
-  button.textContent = "Añadir al carrito";
-  button.addEventListener("click", function() {
-    // When the button is clicked, add the selected quantity to the cart
-    var quantity = input.value;
-    addToCart(itemName, itemPrice, quantity);
-    popup.close();
-  });
-  popup.document.body.appendChild(label);
-  popup.document.body.appendChild(input);
-  popup.document.body.appendChild(button);
+    } else {
+      addToCart(itemName, itemPrice, document.getElementById("cantidad").value);
+    }
+});
 }
 
 // Añade un item al carrito
@@ -48,11 +167,11 @@ function addToCart(itemName, itemPrice, itemQuantity) {
     var encontrado = false;
     while (!encontrado && cnt < rows.length) {
       var cells = rows[cnt].cells
-      console.log(cells[1].innerHTML);
-      if (itemName == cells[1].innerHTML) {
+      console.log(cells[0].innerHTML);
+      if (itemName == cells[0].innerHTML) {
 
         encontrado = true;
-        cells[0].innerHTML = parseInt(cells[0].innerHTML) + parseInt(itemQuantity);
+        cells[1].innerHTML = parseInt(cells[1].innerHTML) + parseInt(itemQuantity);
         cells[2].innerHTML = Math.round((parseFloat(cells[2].innerHTML) + itemPrice*itemQuantity) * 100)/100;
         
       } else {
@@ -64,12 +183,13 @@ function addToCart(itemName, itemPrice, itemQuantity) {
     if (!encontrado) {
 
       var newRow = document.createElement("tr");
-      var quantityCell = document.createElement("td");
-      quantityCell.innerHTML = itemQuantity;
-      newRow.appendChild(quantityCell);
+      newRow.setAttribute('tabindex', '0');
       var nameCell = document.createElement("td");
       nameCell.innerHTML = itemName;
       newRow.appendChild(nameCell);
+      var quantityCell = document.createElement("td");
+      quantityCell.innerHTML = itemQuantity;
+      newRow.appendChild(quantityCell);
       var priceCell = document.createElement("td");
       priceCell.innerHTML = Math.round(itemPrice*itemQuantity*100)/100;
       newRow.appendChild(priceCell);
@@ -115,6 +235,14 @@ function updateTotal(itemPrice) {
    document.getElementById("subtotal").innerHTML = Math.round(newPrice*100)/100;
 }
 
+
+
+
+
+
+
+
+
 // Get the button:
 let mybutton = document.getElementById("myBtn");
 
@@ -134,4 +262,6 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
 
