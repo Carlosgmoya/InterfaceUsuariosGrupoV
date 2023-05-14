@@ -1,11 +1,17 @@
 
 let btn = document.getElementById("help")
-let mensaje = document.getElementById("mensaje")
 
-function mostrar(){
-    if(mensaje.style.display == "none"){
-        mensaje.style.display = "block";
-    }else{
-        mensaje.style.display = "none";
-    }
+btn.addEventListener("click", async () => {
+    await mensaje();
+});
+
+async function mensaje(){
+    await swal.fire({
+        title: "Sobre el codigo",
+        confirmButtonText:"Entendido",
+        html:`
+            <p>Consulta el código de la mesa o consulta al camarero<p/>
+
+        `,
+    });
 }

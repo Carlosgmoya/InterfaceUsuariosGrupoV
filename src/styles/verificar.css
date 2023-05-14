@@ -3,7 +3,13 @@
 form{
     position: fixed;
     top:50%;
-    left:40%;
+    left:37%;
+}
+
+form button{
+    border-radius: 10%;
+    background-color: #4CAF50;
+    color: white;
 }
 
 #help{
@@ -13,24 +19,7 @@ form{
     text-align: center;
     position: fixed;
     top: 50%;
-    left: 37.5%;
+    left: 33%;
     z-index: 999;
-}
-
-#help:hover{
-    background-color: aliceblue;
-}
-
-#mensaje{
-    border: 5px;
-    border-color: black;
-    border-style: solid;
-    text-align:center;
-    display: none;
-    position: fixed;
-    background-color: ghostwhite;
-    top: 55%;
-    right: 47%;
-    width: 30%;
-    z-index: 999;
+    background-color: aqua;
 }
